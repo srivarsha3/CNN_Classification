@@ -1,120 +1,56 @@
-🐱🐶 Cat vs Dog Image Classification using CNN (TensorFlow & Keras)
+Project Overview (STAR Method)
+S – Situation
 
-This project implements a Convolutional Neural Network (CNN) to classify images as cats or dogs using TensorFlow and Keras. The model is trained on image data stored in CSV format, reshaped into image tensors, normalized, and enhanced using data augmentation for better generalization.
+Medical image analysis and image classification tasks require automated systems to reduce manual effort and improve accuracy. Traditional manual analysis is time-consuming and prone to human error, especially when handling large volumes of images.
 
-📌 Project Overview
+T – Task
 
-Goal: Build a deep learning model that can accurately classify images into two categories: Cat or Dog
+The objective of this project was to design and implement a CNN-based image classification system capable of classifying images accurately and to deploy the trained model using a web interface so users can upload images and get predictions in real time.
 
-Approach: Convolutional Neural Network (CNN)
+A – Action
 
-Framework: TensorFlow (Keras API)
+Collected and organized image datasets for classification
 
-Image Size: 100 × 100 RGB images
+Preprocessed images using resizing, normalization, and augmentation
 
-Output: Binary classification (0 → Dog, 1 → Cat)
+Designed and trained a Convolutional Neural Network (CNN) using TensorFlow & Keras
 
-🧠 Model Architecture
+Evaluated the model using accuracy metrics
 
-The CNN model consists of:
+Saved the trained model (model.h5) for reuse
 
-Convolutional Layers (Conv2D):
+Integrated the model with a Flask web application
 
-32, 64, and 128 filters
+Built a frontend interface to upload images and display predictions
 
-Kernel size: 3×3
+R – Result
 
-Activation: ReLU
+Successfully built a CNN model with strong classification accuracy
 
-MaxPooling Layers: Reduce spatial dimensions
+Enabled real-time predictions through a web interface
 
-Dropout Layers: Prevent overfitting
+Created an end-to-end deep learning application combining model training + deployment
 
-Fully Connected Layers (Dense):
+Improved usability by allowing non-technical users to interact with the model
 
-Hidden layer with ReLU
-
-Output layer with Sigmoid activation
-
-Loss Function: Binary Crossentropy
-
-Optimizer: Adam
-
-Evaluation Metric: Accuracy
-
-🔄 Data Preprocessing
-
-Data loaded from CSV files:
-
-input.csv, labels.csv
-
-input_test.csv, labels_test.csv
-
-Reshaped into (samples, 100, 100, 3)
-
-Normalized pixel values to range [0, 1]
-
-Labels reshaped for binary classification
-
-🔁 Data Augmentation
-
-To improve model robustness, ImageDataGenerator is used with:
-
-Rotation
-
-Width & height shifts
-
-Zooming
-
-Horizontal flipping
-
-This helps the model generalize better to unseen images.
-
-🚀 Model Training
-
-Batch Size: 32
-
-Epochs: 30
-
-Training Method: datagen.flow()
-
-Validation: Separate test dataset
-
-The model learns from augmented images while validating on test data.
-
-📊 Evaluation & Prediction
-
-Model performance evaluated on test data
-
-Random test image displayed with prediction
-
-Prediction threshold:
-
-0 → Dog
-
-1 → Cat
-
-💾 Model Saving
-
-After training, the model is saved as:
-
-model.h5
-
-
-This allows reuse of the trained model without retraining.
-
-🛠 Technologies Used
+🛠️ Tech Stack
 
 Python
 
-NumPy
-
-Matplotlib
-
 TensorFlow / Keras
 
-CNN (Deep Learning)
+NumPy
 
-📌 Conclusion
+Flask
 
-This project demonstrates how to build an end-to-end image classification pipeline using CNNs, including preprocessing, augmentation, training, evaluation, prediction, and model persistence. It’s ideal for beginners learning deep learning and computer vision.
+HTML
+
+🚀 How to Run the Project
+pip install -r requirements.txt
+python app.py
+
+
+Open in browser:
+
+http://127.0.0.1:5000/
+
