@@ -1,56 +1,46 @@
 Project Overview (STAR Method)
 S – Situation
 
-Medical image analysis and image classification tasks require automated systems to reduce manual effort and improve accuracy. Traditional manual analysis is time-consuming and prone to human error, especially when handling large volumes of images.
+Image classification is a fundamental computer vision task, but handling large image datasets efficiently can be challenging. In many cases, image data is stored in non-traditional formats such as CSV files, requiring additional preprocessing steps to convert the data into a usable form for deep learning models.
 
 T – Task
 
-The objective of this project was to design and implement a CNN-based image classification system capable of classifying images accurately and to deploy the trained model using a web interface so users can upload images and get predictions in real time.
+The objective of this project was to build a Convolutional Neural Network (CNN) capable of accurately classifying images as cats or dogs, using image data stored in CSV format, and to improve the model’s generalization performance through proper preprocessing and data augmentation techniques.
 
 A – Action
 
-Collected and organized image datasets for classification
+Loaded image data stored in CSV files and reshaped it into image tensors
 
-Preprocessed images using resizing, normalization, and augmentation
+Normalized pixel values to improve training stability
 
-Designed and trained a Convolutional Neural Network (CNN) using TensorFlow & Keras
+Applied data augmentation techniques to reduce overfitting and enhance generalization
 
-Evaluated the model using accuracy metrics
+Designed and trained a CNN model using TensorFlow and Keras
 
-Saved the trained model (model.h5) for reuse
+Evaluated the model’s performance on unseen data
 
-Integrated the model with a Flask web application
+Saved the trained model for reuse and deployment
 
-Built a frontend interface to upload images and display predictions
+Integrated the model with a Flask-based web interface that allows users to upload an image, preview it, and receive real-time predictions
 
 R – Result
 
-Successfully built a CNN model with strong classification accuracy
+Successfully developed a CNN model that accurately classifies images as cats or dogs
 
-Enabled real-time predictions through a web interface
+Improved model generalization through normalization and data augmentation
 
-Created an end-to-end deep learning application combining model training + deployment
+Demonstrated the ability to handle image data stored in CSV format
 
-Improved usability by allowing non-technical users to interact with the model
+Delivered an end-to-end solution combining model training, preprocessing, and deployment
 
-🛠️ Tech Stack
+🛠️ Technologies Used
 
 Python
 
-TensorFlow / Keras
+TensorFlow & Keras
 
 NumPy
 
 Flask
 
-HTML
-
-🚀 How to Run the Project
-pip install -r requirements.txt
-python app.py
-
-
-Open in browser:
-
-http://127.0.0.1:5000/
-
+HTML / CSS
